@@ -47,10 +47,11 @@ class MyHomePage extends StatelessWidget {
               elevation: 10,
             ),
           ),
-          Card(
-            child: Text('World!'),
-            elevation: 10, // elevation is for drop shadow
-          )
+          Column(children: transactions.map((transaction) {
+            return Card(
+              child: Text(transaction.title),
+            );
+          }).toList(),)
         ],
       ),
     );
