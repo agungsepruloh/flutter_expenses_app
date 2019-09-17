@@ -66,7 +66,7 @@ class MyHomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(7),
                       ),
                       child: Text(
-                        '\$' + transaction.amount.toString(),
+                        '\$${transaction.amount}', // string interpolation using dollar($) sign (for escape a value)
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
